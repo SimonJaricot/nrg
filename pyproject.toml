@@ -1,0 +1,31 @@
+[project]
+name = "nrg"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Simon", email = "simon.jaricot@protonmail.com" }
+]
+dependencies = [
+    "pandas>=2.2.3",
+    "geopandas>=1.0.1",
+    "notebook>=7.2.2",
+    "jupyterlab>=4.2.5",
+    "matplotlib>=3.9.2",
+    "seaborn>=0.13.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nrg"]
